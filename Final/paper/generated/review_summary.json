@@ -1,0 +1,37 @@
+{
+ "gu_bank_review.csv": {
+  "Correct": 29,
+  "Wrong": 1,
+  "rows": 30
+ },
+ "gu_lexicon_review.csv": {
+  "Ambiguous": 5,
+  "Correct": 4,
+  "rows": 9
+ },
+ "gu_pairs_review.csv": {
+  "Ambiguous": 3,
+  "Correct": 19,
+  "rows": 22
+ },
+ "hi_pairs_review.csv": {
+  "Ambiguous": 1,
+  "Correct": 62,
+  "rows": 63
+ },
+ "mr_bank_review.csv": {
+  "Ambiguous": 3,
+  "Correct": 27,
+  "rows": 30
+ },
+ "mr_lexicon_review.csv": {
+  "Ambiguous": 6,
+  "Correct": 3,
+  "rows": 9
+ },
+ "mr_pairs_review.csv": {
+  "Ambiguous": 4,
+  "Correct": 19,
+  "rows": 23
+ }
+}

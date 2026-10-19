@@ -1,0 +1,23 @@
+{
+ "what": "Config C identity judge merge_judge_entity_t2_v2 (UNCHANGED) on Qwen2.5-7B: third independent labelled validation set, scorer and acceptance criteria, frozen BEFORE any model run on them",
+ "frozen_at_utc": "2026-10-14T06:05:00+00:00",
+ "prompt_id": "merge_judge_entity_t2_v2",
+ "prompt_sha256": "36146ec054a700796a785a5a942c0fdaaa33a1e100103c8a8410d596c146f149",
+ "max_new_tokens": 128,
+ "model": "Qwen/Qwen2.5-7B-Instruct@a09a35458c702b33eeacc393d103063234e8bc28, fp16, sharded over 2 x T4 (HFGenerator.load_sharded); greedy, seed 0, batch 8",
+ "backbone_change": "the judge backbone differs from Tier 1 and from the Tier-2 QA answerer (both Qwen2.5-3B)",
+ "files_sha256": {
+  "judge_validation_7b/cases_7b.jsonl": "002e5c9128546613f1d8fb31de89eb03fbbc6f16afd312c4c8292710e3395141",
+  "judge_validation_7b/criteria_7b.json": "4912869e042729dd97e925853d2c6540a486d86e7ec35d6ea3713893e22a17bf",
+  "judge_validation_7b/score_7b.py": "d09e5333dd11af447e95d4c4c145ff0a14f77d0feb5b4f2cb9476f42e76d78ef",
+  "judge_validation_7b/make_cases_7b.py": "d84fa6a669888e47620be128facf445fc6ab8e8fc543b48563fa757ab4db0404",
+  "judge_validation/score.py": "df62903a2e4ed31ed5ce1b393b879df8d64c00c57a2eccd5e12a67964cb933a8"
+ },
+ "n_cases": 77,
+ "independence": "no sentence equals a v1/v2 case, a benchmark (v1.0 or mirror) sentence or a distractor; no person name or place shared with them or with either identity prompt; only closed classes recur (months, weekdays, kinship/address terms, common German nouns)",
+ "previous_attempts": [
+  "merge_judge_entity_t2_v1 on 3B failed criteria_v1 (eval/tier2_entity_runs/judge_validation_20261014)",
+  "merge_judge_entity_t2_v2 on 3B failed criteria_v2 (eval/tier2_entity_runs/judge_v2_validation_20261014)"
+ ],
+ "status": "FROZEN"
+}

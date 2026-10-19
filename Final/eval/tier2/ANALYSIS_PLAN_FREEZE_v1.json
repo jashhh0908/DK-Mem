@@ -1,0 +1,25 @@
+{
+ "what": "Tier-2 full-run scoring and reporting plan v1, frozen BEFORE any full-run output exists",
+ "frozen_at_utc": "2026-10-14T07:42:29+00:00",
+ "files_sha256": {
+  "analysis_plan_full_v1.md": "e0dfc1940632177aa23d8938be16ffcc6ecd8a509821b57cff950e0ecadfe30e",
+  "entity_report.py": "a43499c95cde8f38dc84e8b5d9537887ed26d4f05689e72ed5f6290795837137",
+  "contract.py": "fac15b58e2e25e2fa69f6b301f64578d4d1d3cbf5bd8ee91aed09585a660a92e",
+  "generate_tier2.py": "e8736b6af1d9db61d0c79b02a19dfa3a8b0ee6df688535fdcc7b3f10c9715605"
+ },
+ "judge": {
+  "prompt_id": "merge_judge_entity_t2_v2",
+  "prompt_sha256": "36146ec054a700796a785a5a942c0fdaaa33a1e100103c8a8410d596c146f149",
+  "model": "Qwen/Qwen2.5-7B-Instruct@a09a35458c702b33eeacc393d103063234e8bc28"
+ },
+ "qa_answerer": "Qwen/Qwen2.5-3B-Instruct@aa8e72537993ba99e69dfaafa59ed015b17504d1",
+ "embedder": "BAAI/bge-m3@5617a9f61b028005a4858fdac845db406aefb181",
+ "tau_d": 0.9,
+ "seed": 0,
+ "bootstrap": {
+  "B": 10000,
+  "seed": 20261014
+ },
+ "full_run_outputs_existing_at_freeze": [],
+ "status": "FROZEN"
+}

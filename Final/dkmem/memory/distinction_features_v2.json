@@ -1,0 +1,428 @@
+{
+  "schema_version": "1.0",
+  "description": "DK-Mem distinction lexicon v2 (DRAFT, not frozen): the 15 pilot-reviewed Hindi entries of v1, unchanged, plus 18 Marathi (mr) and Gujarati (gu) kinship/register entries from the Member-3 proposal with their surface forms unchanged. The mr/gu entries were reviewed by the model (Claude), NOT by native speakers: no human verification was available. Each mr/gu entry's notes carry its review verdict; 'unsure' entries are kept and their risks are stated. Still held, as in the proposal: Gujarati naani (homograph of the adjective 'small/young') and Marathi naani, so a daadi/naani pair is tagged on one side only and the gate cannot veto it; Marathi periphrases (babanchi aai / aaichi aai) are not tagged. Built by tools/build_lexicon_v2.py; v1 is unchanged.",
+  "entries": [
+    {
+      "id": "hi-kinship-tau",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tau",
+        "ताऊ"
+      ],
+      "value": "tau",
+      "notes": "Father's older brother. Pilot-reviewed. Native-script form is an orthographic equivalent of the Romanized form."
+    },
+    {
+      "id": "hi-kinship-chacha",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "chacha",
+        "चाचा"
+      ],
+      "value": "chacha",
+      "notes": "Father's younger brother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-tai",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tai",
+        "ताई"
+      ],
+      "value": "tai",
+      "notes": "Wife of father's older brother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-chachi",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "chachi",
+        "चाची"
+      ],
+      "value": "chachi",
+      "notes": "Wife of father's younger brother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-mama",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "mama",
+        "मामा"
+      ],
+      "value": "mama",
+      "notes": "Mother's brother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-mausa",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "mausa",
+        "मौसा"
+      ],
+      "value": "mausa",
+      "notes": "Husband of mother's sister. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-mami",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "mami",
+        "मामी"
+      ],
+      "value": "mami",
+      "notes": "Wife of mother's brother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-mausi",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "mausi",
+        "मौसी"
+      ],
+      "value": "mausi",
+      "notes": "Mother's sister. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-nana",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "nana",
+        "नाना"
+      ],
+      "value": "nana",
+      "notes": "Mother's father. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-dadi",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "dadi",
+        "दादी"
+      ],
+      "value": "dadi",
+      "notes": "Father's mother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-nani",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "nani",
+        "नानी"
+      ],
+      "value": "nani",
+      "notes": "Mother's mother. Pilot-reviewed."
+    },
+    {
+      "id": "hi-kinship-bua",
+      "lang": "hi",
+      "distinction_class": "kinship",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "bua",
+        "बुआ"
+      ],
+      "value": "bua",
+      "notes": "Father's sister. Pilot-reviewed."
+    },
+    {
+      "id": "hi-register-tu",
+      "lang": "hi",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tu",
+        "तू"
+      ],
+      "value": "tu",
+      "notes": "Second-person pronoun associated with an informal/intimate register. Pilot-reviewed."
+    },
+    {
+      "id": "hi-register-tum",
+      "lang": "hi",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tum",
+        "तुम"
+      ],
+      "value": "tum",
+      "notes": "Second-person pronoun with register/social-indexical value distinct from tu and aap. Pilot-reviewed."
+    },
+    {
+      "id": "hi-register-aap",
+      "lang": "hi",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "aap",
+        "आप"
+      ],
+      "value": "aap",
+      "notes": "Second-person pronoun associated with deferential/formal usage. Pilot-reviewed."
+    },
+    {
+      "id": "mr-kinship-aaji",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^aaji$",
+        "^आजीं?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "aaji",
+      "notes": "NEW, UNVALIDATED. Molesworth (p.64) glosses आजी as 'a grandmother paternal or maternal', i.e. lineage-NEUTRAL - this contradicts MEMBER3_COORDINATION.md ('paternal grandmother'). Value is therefore 'aaji', not 'dadi'. CONSEQUENCE: an aaji/nani mismatch across two mentions would make the gate return 'incompatible' even if both refer to the same maternal grandmother - raised with Member 2. Molesworth also lists आजी as a respectful particle of address. Regex: closed list of agglutinated postpositions (anchored, so आजीवन 'lifelong' does NOT match); suffix list needs native review. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Lineage-neutral value 'aaji' is a sound choice, but a mismatch with nani-type terms is then not detected and aaji is also an address term for any elderly woman. Class kinship fine; regex anchoring is correct (आजीवन excluded). Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either. NATIVE DECISION REQUIRED before activation: keep gating, restrict, or drop this entry; any suffix additions listed above are unconfirmed proposals. Entry stays PROVISIONAL (lexicon_v2 overlay only, not in v1)."
+    },
+    {
+      "id": "mr-kinship-kaka",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^kaka$",
+        "^काकां?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "kaka",
+      "notes": "NEW, UNVALIDATED. Father's brother. RISK: काका is widely used as a generic address for older men (fictive kinship) - native review required. Suffix list needs native review. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Father's brother is right, but काका is very commonly a generic address for older men, so a context-free tag may mark unrelated people as the same relative; consider whether to keep it gating or restrict to possessive contexts (e.g. माझे काका), which the matcher cannot do. Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either. NATIVE DECISION REQUIRED before activation: keep gating, restrict, or drop this entry; any suffix additions listed above are unconfirmed proposals. Entry stays PROVISIONAL (lexicon_v2 overlay only, not in v1)."
+    },
+    {
+      "id": "mr-kinship-kaku",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(kaku|kaaku)$",
+        "^काकूं?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "kaku",
+      "notes": "NEW, UNVALIDATED. Wife of father's brother. Possible fictive use for older women - native review required. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Wife of father's brother is right, but काकू is also a generic address for older women, same fictive-use risk as काका. Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either. NATIVE DECISION REQUIRED before activation: keep gating, restrict, or drop this entry; any suffix additions listed above are unconfirmed proposals. Entry stays PROVISIONAL (lexicon_v2 overlay only, not in v1)."
+    },
+    {
+      "id": "mr-kinship-atya",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(atya|aatya)$",
+        "^आत्यां?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "atya",
+      "notes": "NEW, UNVALIDATED. Father's sister (Hindi bua). Value kept as romanized Marathi term per prompts.py convention. || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] Father's sister is right; fictive use is rare, so low risk as a gating entry. Romanised variants atya/aatya covered. Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either."
+    },
+    {
+      "id": "mr-kinship-mavshi",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(mavshi|maushi|mavashi)$",
+        "^मावशीं?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "mavshi",
+      "notes": "NEW, UNVALIDATED. Mother's sister (Hindi mausi). RISK (reported usage, unverified): मावशी is also used as an address term for domestic helpers/older women - native review required. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Mother's sister is right, but मावशी is also used for domestic helpers and older women (as noted), so false 'different' vetoes are possible. Romanised variants mavshi/maushi/mavashi covered. Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either. NATIVE DECISION REQUIRED before activation: keep gating, restrict, or drop this entry; any suffix additions listed above are unconfirmed proposals. Entry stays PROVISIONAL (lexicon_v2 overlay only, not in v1)."
+    },
+    {
+      "id": "mr-kinship-mama",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(mama|maama)$",
+        "^मामां?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "mama",
+      "notes": "NEW, UNVALIDATED. Mother's brother. Same English 'mama' collision risk as Hindi. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Mother's brother is right, but मामा/mama has generic and slang uses, and romanised 'mama' collides with English 'mama' (mother) when the turn is code-mixed; consider dropping the romanised form or confirming it. Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either. NATIVE DECISION REQUIRED before activation: keep gating, restrict, or drop this entry; any suffix additions listed above are unconfirmed proposals. Entry stays PROVISIONAL (lexicon_v2 overlay only, not in v1)."
+    },
+    {
+      "id": "mr-kinship-mami",
+      "lang": "mr",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(mami|maami)$",
+        "^मामीं?(ला|ना|ने|नी|ची|चा|चे|च्या|कडे|शी|ही|च)?$"
+      ],
+      "value": "mami",
+      "notes": "NEW, UNVALIDATED. Wife of mother's brother. || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] Mother's brother's wife is right; low collision risk. Romanised mami/maami covered. Suffix list lacks common forms: neuter possessive -चं (e.g. आजीचं), -कडून, -साठी, -सोबत/-बरोबर, -पासून, -वर; romanised inflected forms (aajichi, kakanna) are not covered either."
+    },
+    {
+      "id": "mr-register-tu",
+      "lang": "mr",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tu",
+        "तू",
+        "tula",
+        "तुला",
+        "तुझा",
+        "तुझी",
+        "तुझे",
+        "तुझं",
+        "तुझ्या"
+      ],
+      "value": "tu",
+      "notes": "NEW, UNVALIDATED. Least-formal singular 2nd person (Wiktionary). Dative tula/तुला; possessive तुझा/तुझी/तुझे/तुझं/तुझ्या. RISK: तुला also a noun (balance/Libra) - unverified, low. Gap: emphatic clitics (तूच) not covered. Held: romanized possessives (tujha/tuza - inconsistent romanization). || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] तू (informal singular) with dative/possessive forms is correct as a closed exact-word list. Gaps: agglutinated postposition forms (तुझ्याशी, तुझ्याकडे, तुझ्यावर), emphatic तूच/तुलाच/तुझंच, and romanised possessives (already noted). तुला as 'balance' is rare."
+    },
+    {
+      "id": "mr-register-tumhi",
+      "lang": "mr",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tumhi",
+        "तुम्ही",
+        "tumhala",
+        "तुम्हाला",
+        "तुमचा",
+        "तुमची",
+        "तुमचे",
+        "तुमचं",
+        "तुमच्या"
+      ],
+      "value": "tumhi",
+      "notes": "NEW, UNVALIDATED. Mid-formality 2nd person AND 2nd person plural (Wiktionary) - a tu/tumhi difference may reflect number, not register. EXCLUDED: आपण (Molesworth: reflexive pronoun 'standing indifferently for I, thou, he, we, ye, they'; also inclusive 'we'). || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] तुम्ही is both polite singular and plural 'you', so a tu/tumhi difference may reflect number, not register (as noted); आपण is a further formal 'you' but is excluded for ambiguity, so formality is only partly covered. Also note: under README convention 2 same-vocative tu/tumhi pairs are gold-same, but the gate treats tu vs tumhi as incompatible and would veto the merge - a design consequence worth stating. Missing forms: तुम्हास, तुम्हाशी, तुमच्याशी/तुमच्याकडे, तुमचंच. NATIVE DECISION REQUIRED before activation: keep gating, restrict, or drop this entry; any suffix additions listed above are unconfirmed proposals. Entry stays PROVISIONAL (lexicon_v2 overlay only, not in v1)."
+    },
+    {
+      "id": "gu-kinship-dadi",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(dadi|daadi)$",
+        "^દાદી(ને|નો|ની|નું|ના|નાં|એ|થી|માં|મા)?$"
+      ],
+      "value": "dadi",
+      "notes": "NEW, UNVALIDATED. Father's mother. Includes compound દાદીમા. Gujarati postpositions attach to the noun, hence the anchored closed suffix list (needs native review). || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] Father's mother is right for Gujarati dadi (unlike lineage-neutral Marathi aaji). Gap: the very common Gujarati term 'ba' (also used for mother) is not included, deliberately or not; it is ambiguous, so leaving it out is the safer choice. Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-kinship-kaka",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^kaka$",
+        "^કાકા(ને|નો|ની|નું|ના|નાં|એ|થી|માં)?$"
+      ],
+      "value": "kaka",
+      "notes": "NEW, UNVALIDATED. Father's brother. RISK: generic address for older men (fictive kinship) - native review required. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Father's brother is right, but 'kaka' is very commonly a generic address for older men, so a context-free tag can tag unrelated people as the same relative (same risk as Marathi kaka). Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-kinship-kaki",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^kaki$",
+        "^કાકી(ને|નો|ની|નું|ના|નાં|એ|થી|માં)?$"
+      ],
+      "value": "kaki",
+      "notes": "NEW, UNVALIDATED. Wife of father's brother. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Father's brother's wife is right, but 'kaki' is also a generic address for older women (fictive kinship), same risk as kaka. Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-kinship-maasi",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(maasi|masi)$",
+        "^માસી(ને|નો|ની|નું|ના|નાં|એ|થી|માં)?$"
+      ],
+      "value": "maasi",
+      "notes": "NEW, UNVALIDATED. Mother's sister. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Mother's sister is right, but 'maasi' is also used for older women and domestic helpers, so false 'different' vetoes are possible. Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-kinship-foi",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^(foi|phoi|fai|faiba|foiba)$",
+        "^(ફોઈ|ફઈ|ફુઈ|ફૈ)(ને|નો|ની|નું|ના|નાં|એ|થી|માં|બા)?$"
+      ],
+      "value": "foi",
+      "notes": "NEW, UNVALIDATED. Father's sister. Wiktionary lists ફુઈ, ફઈ, ફૈ as alternative forms of ફોઈ - all mapped to one value. The '-બા'/'-ba' honorific compound (faiba/foiba) is UNVERIFIED and must be confirmed or removed by the reviewer. || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] Father's sister is right; the alternative spellings (fai/fui/phoi) are fine. 'faiba' is a widely used honorific for the father's sister (e.g. the naming-ceremony custom), so keeping the -ba suffix is reasonable; 'foiba' is less common but harmless. Low fictive-use risk. Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-kinship-mama",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^mama$",
+        "^મામા(ને|નો|ની|નું|ના|નાં|એ|થી|માં)?$"
+      ],
+      "value": "mama",
+      "notes": "NEW, UNVALIDATED. Mother's brother. Same English 'mama' collision risk. || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] Mother's brother is right, but 'mama' has generic uses and romanised 'mama' collides with English 'mama' (mother) in code-mixed text; consider dropping the romanised form. Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-kinship-mami",
+      "lang": "gu",
+      "distinction_class": "kinship",
+      "match_type": "regex",
+      "surface_forms": [
+        "(?i)^mami$",
+        "^મામી(ને|નો|ની|નું|ના|નાં|એ|થી|માં)?$"
+      ],
+      "value": "mami",
+      "notes": "NEW, UNVALIDATED. Wife of mother's brother. || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] Mother's brother's wife is right; low collision risk. Gaps: romanised inflected forms (e.g. -ne/-no/-ni attached in Latin script) are not covered; separate-word postpositions are fine because the matcher is per token."
+    },
+    {
+      "id": "gu-register-tu",
+      "lang": "gu",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tu",
+        "તું",
+        "તેં",
+        "tane",
+        "તને",
+        "તારું",
+        "તારો",
+        "તારી"
+      ],
+      "value": "tu",
+      "notes": "NEW, UNVALIDATED. Informal singular 2nd person; ergative તેં, dative તને, possessive તારું/તારો/તારી (Wiktionary pronoun table). HELD: તારા/'tara' (also 'stars' and the name Tara); romanized 'te' (collides with 3rd-person તે 'he/she/that', which differs from ergative તેં only by the anusvara). || MODEL REVIEW (Claude, not native-verified): ok. [Claude draft, not native-verified] Informal singular 'tu' with ergative 'te(n)', dative 'tane' and possessives 'taru/taro/tari' is correct; holding 'tara' and romanised 'te' is the right call. Gap: romanised possessives (taru/taro/tari) and 'tare' (obligative) are not covered."
+    },
+    {
+      "id": "gu-register-tame",
+      "lang": "gu",
+      "distinction_class": "register",
+      "match_type": "exact_word",
+      "surface_forms": [
+        "tame",
+        "તમે",
+        "tamne",
+        "તમને",
+        "તમારું",
+        "તમારો",
+        "તમારી",
+        "તમારા"
+      ],
+      "value": "tame",
+      "notes": "NEW, UNVALIDATED. Plural AND formal-singular 2nd person (Wiktionary); ergative identical to nominative. A tu/tame difference may reflect number, not register. RISK: romanized 'tame' is an English word in code-mixed text. Held: આપ (very formal; forms not source-checked). || MODEL REVIEW (Claude, not native-verified): unsure. [Claude draft, not native-verified] 'tame' is both formal singular and plural 'you', so a tu/tame difference may reflect number, not register (as noted). The English-'tame' collision is low risk in practice. Gap: 'tamare' (obligative) not covered; 'aap' held, which is fine."
+    }
+  ]
+}

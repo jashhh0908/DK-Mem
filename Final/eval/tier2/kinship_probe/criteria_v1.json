@@ -1,0 +1,50 @@
+{
+ "version": "kinship_probe_criteria_v1",
+ "status": "DRAFT: becomes binding only when FREEZE.json is written after the Hindi review sign-off",
+ "question": "Does the frozen Config C v2 judge merge two different Hindi kinship terms when its reason names both relatives with the same English word, and does sentence structure change that?",
+ "judge": {"prompt_id": "merge_judge_entity_t2_v2", "model_id": "Qwen/Qwen2.5-7B-Instruct", "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+           "placement": "HFGenerator.load_sharded, 2 x T4", "max_new_tokens": 128, "do_sample": false, "seed": 0, "batch_size": 8, "orders": ["ab", "ba"]},
+ "naming_classifier": {
+  "reason_pattern": "A is about <entity A>; B is about <entity B>; <verdict>",
+  "source_term": "the entity text contains the case's Hindi kinship term for that side (case-insensitive; the root without -ji also counts, e.g. 'nana' for nanaji)",
+  "english_kin_words": ["grandmother", "grandma", "granny", "grandfather", "grandpa", "aunt", "auntie", "aunty", "uncle", "sister", "brother", "mother", "father",
+                        "mom", "mum", "dad", "sister-in-law", "brother-in-law", "niece", "nephew", "cousin", "relative", "grandparent"],
+  "english_kin": "the entity text contains no source term and contains an english_kin_word (the word itself, not the speaker's possessive)",
+  "modes": {
+   "source_distinct": "both sides named with their (different) source terms",
+   "english_same": "both sides english_kin with the SAME english kin word",
+   "english_different": "both sides english_kin with different english kin words",
+   "mixed": "any other combination (one source, one english, other text)",
+   "unparsed": "the reason does not match the pattern or the output fails the strict parser"},
+  "meri_as_name": "an entity text containing \"Meri's\"/\"Mere's\" or starting with \"Meri \"/\"Mere \" followed by an english kin word"
+ },
+ "preregistered_diagnostics": {
+  "mechanism": {
+   "population": "H-diff calls (36 cases x 2 orders = 72)",
+   "consistent_with_hypothesis_if": "english_same calls >= 8 AND merge rate given english_same >= 0.80 AND merge rate given any other mode <= 0.10",
+   "inconsistent_if": "english_same calls >= 8 AND merge rate given english_same <= 0.30",
+   "otherwise": "inconclusive",
+   "wording": "an association between english_same naming and merging is reported as evidence CONSISTENT WITH the hypothesis, not as proof that the naming causes the merge"},
+  "structure": {
+   "population": "H-diff, P-same vs N-diff, paired by term pair and order (12 x 2 = 24 units)",
+   "outcomes": ["merge", "english_same"],
+   "statistic": "difference P-same minus N-diff, 95% paired percentile bootstrap (B = 10000, seed 20261014) and exact two-sided McNemar (tier2.entity_report.paired)",
+   "structure_matters_if": "difference >= 0.25 AND the 95% interval excludes 0",
+   "N-same": "reported to separate the frame from the attribute; not gated"}
+ },
+ "reported_not_gated": [
+  "raw counts and denominators for every naming mode x group x cell x order",
+  "merge rate on H-same-named (correct merges), per cell",
+  "keep_both rate on E-explicit; merge rate on E-collapsed (reference, unlabelled)",
+  "possessive: H-diff P-same with Meri/Mere vs the possessive group without it, merge and english_same, same term pairs",
+  "benchmark term pairs vs new term pairs",
+  "order consistency, parse failures, reason-decision contradictions, meri_as_name count"],
+ "limitations_reported_with_every_result": [
+  "the reason is generated together with the decision and may be a rationalisation: an association is not a causal effect",
+  "no token log-probabilities",
+  "one model, one seed, greedy decoding",
+  "the naming classifier is a fixed word list over a fixed reason template",
+  "constructed, templated sentences; kinship words necessarily recur from the benchmark",
+  "labels rest on the kinship definitions and one fluent reviewer"],
+ "use_of_results": "decide whether to test an exact-word-preservation prompt variant on a SEPARATE new validation set; never to tune the frozen v2 judge, the benchmark, the gate or the lexicon"
+}

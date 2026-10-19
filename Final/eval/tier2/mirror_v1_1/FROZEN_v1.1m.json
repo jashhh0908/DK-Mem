@@ -1,0 +1,38 @@
+{
+ "benchmark": "DK-Mem Tier-2 controlled multi-session injection benchmark: v1.1m mirror (counter-confound) arm",
+ "version": "1.1m",
+ "status": "FROZEN",
+ "frozen_at_utc": "2026-10-14T05:15:21+00:00",
+ "sha256": {
+  "data/tier2_conversations.jsonl": "605a95454a4b388eed9e98c7b0b519758d3d79d2c1a65d88dcb336364b98a99d",
+  "data/tier2_qa_questions.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "data/tier2_injection_metadata.jsonl": "dd559913b8d93334dec5ac68cee0c27dde2c358da1e8e056cc5916dde51acd4d",
+  "data/tier2_gold.jsonl": "1125c4752436696ce1a214f3ac909c711c6eef049d29e2951d7654fc3716d553",
+  "data/tier2_qa_reference.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "banks/pair_specs_mirror.json": "c56570b07e30f576d002381be951b12ac8cdee16a9e2e2ca1bf6e20c4a962109",
+  "make_mirror_bank.py": "ab94ead7eac35426fa2866fd39a820f67a08a8cc1098f7afef4f375c169eb1bd",
+  "generate_mirror.py": "45736d71a90a598e7c5d9b4a385e969aa33dfbce57f91445f7ba135d97428f41",
+  "validate_mirror.py": "c84be9bb24599f8bc471bf8c57d8b5a9ccc43b9cf71401b51fc48c397cce506e"
+ },
+ "derived_from_v1_0": {
+  "data/tier2_conversations.jsonl": "e5b9926a0ae9e6be545ecf33030807db65947c55711b9072412583d7a1448221",
+  "data/tier2_injection_metadata.jsonl": "f1a207ea50745bb1d2b7e34ff7fa77f53e46b71b3a74a388b6a0886c0c38b7a3",
+  "data/tier2_gold.jsonl": "7bfd9ea4ead48ffe6e240cbd1d1d4ed77bb573dcce2ebebbc50815c54bc10df3",
+  "banks/pair_specs.json": "70689e771b6e82642397d16ac0e279aaa2dab664b5ef97d8d2df3139c910331a"
+ },
+ "design": "69 conversations, each the v1.0 conversation with ids renamed t2c_->t2m_ and only member b's sentence replaced: gold-different pairs state a DIFFERENT attribute, gold-same pairs the SAME attribute with a CONFLICTING value. Labels, markers, session positions and distractors are v1.0's. Together with v1.0 the relation is balanced over the attribute pattern in every class x relation stratum.",
+ "limitations": [
+  "no QA questions (merge-decision arm only; v1.0 keeps its QA)",
+  "labels inherit the provisional Tier-1 gold and the v1.0 design assumptions (name_variant different read at the person level; German register pairs as two addressees)",
+  "class, relation and language stay confounded as in v1.0 (kinship all different, Hindi register all same, German register all different)",
+  "changing the attribute changes the surface similarity, so the retrieval stage may compare different pairs at another rate than in v1.0: report retrieval status per arm",
+  "the six German replacement sentences are hand-written; all others are templated from the v1.0 vocabulary"
+ ],
+ "counts": {
+  "conversations": 69,
+  "injected_pairs": 69,
+  "different|different_attribute": 42,
+  "same|same_attribute_conflicting_value": 27,
+  "qa_questions": 0
+ }
+}

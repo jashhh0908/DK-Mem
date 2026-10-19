@@ -1,0 +1,101 @@
+{
+ "what": "Tier-2 runner dependencies vendored from the Tier-2 archive (ipd_2.0.zip, eval/harness, eval/evaluator, eval/diagnostics/no_entry/classify.py). Copied byte-for-byte except harness/_dkmem.py, whose only change is resolving the dkmem root inside this repository.",
+ "not_vendored": {
+  "harness/judge.py": "the harness neutral same/different judge. It reused the id merge_judge_v1 with a different prompt (sha256 f0dc9cf7...); Config C now uses dkmem.memory.judge.MERGE_JUDGE_V1.",
+  "harness/episode.py": "Tier-1 episode runner; imports harness.judge. The two strategy-name maps the Tier-2 runner needs are defined in tier2/run_tier2.py.",
+  "harness/{run_tier1,native,sharded,evaluate_a_real}.py": "Tier-1 harness, not used by Tier 2.",
+  "teamB_answer_key.jsonl": "protected answer key: never copied"
+ },
+ "files": {
+  "harness/__init__.py": {
+   "source_sha256": "d4b7a700858e26a8b9eb500e6ba178b1476a793bef46a8efe2eea07b8af89cea",
+   "local_sha256": "d4b7a700858e26a8b9eb500e6ba178b1476a793bef46a8efe2eea07b8af89cea",
+   "identical_to_source": true
+  },
+  "harness/_dkmem.py": {
+   "source_sha256": "bc0621842ac4a059136062abcf360b8447062d20cd346dc61afda1e5bb1ded92",
+   "local_sha256": "98defbc6c9456dd5280911e2d4cd5fd4e6aa1ee902d9a498f490195369f9c236",
+   "identical_to_source": false
+  },
+  "harness/extractors.py": {
+   "source_sha256": "6a977558901defb6676fabcfca4ccd62fd63671a21c7d3d3fe9804048831ee10",
+   "local_sha256": "6a977558901defb6676fabcfca4ccd62fd63671a21c7d3d3fe9804048831ee10",
+   "identical_to_source": true
+  },
+  "harness/hosts.py": {
+   "source_sha256": "9b260f314e2dfac928d9f9a1073906bdc08a0f41a534d103582f4c6d5d1fe546",
+   "local_sha256": "9b260f314e2dfac928d9f9a1073906bdc08a0f41a534d103582f4c6d5d1fe546",
+   "identical_to_source": true
+  },
+  "harness/similarity.py": {
+   "source_sha256": "222464c4965de335f0b5056214380e26d2c7e420727c3ab3c02ce3ebe2addde0",
+   "local_sha256": "222464c4965de335f0b5056214380e26d2c7e420727c3ab3c02ce3ebe2addde0",
+   "identical_to_source": true
+  },
+  "harness/writer.py": {
+   "source_sha256": "26564bd63dbfb9ddd025015224476fa45ae10996156649b868bbc941b48532a6",
+   "local_sha256": "26564bd63dbfb9ddd025015224476fa45ae10996156649b868bbc941b48532a6",
+   "identical_to_source": true
+  },
+  "diagnostics/no_entry/classify.py": {
+   "source_sha256": "294f06624fef4bc17e7333222bc24d191c4e142c6103ba9517efe9e7e5f811d7",
+   "local_sha256": "294f06624fef4bc17e7333222bc24d191c4e142c6103ba9517efe9e7e5f811d7",
+   "identical_to_source": true
+  },
+  "evaluator/__init__.py": {
+   "source_sha256": "799d852b357d993d4f1b558a9eb9f7e0c68c742dcfc1fb9a7c23bba955fc1787",
+   "local_sha256": "799d852b357d993d4f1b558a9eb9f7e0c68c742dcfc1fb9a7c23bba955fc1787",
+   "identical_to_source": true
+  },
+  "evaluator/__main__.py": {
+   "source_sha256": "4f5f401fbadb4100ec3ee14c16cfd8d5b182307ed57fcec0154db29afca45b22",
+   "local_sha256": "4f5f401fbadb4100ec3ee14c16cfd8d5b182307ed57fcec0154db29afca45b22",
+   "identical_to_source": true
+  },
+  "evaluator/contract_report.py": {
+   "source_sha256": "ed6d43201d0cba7f7772112d60f91d2dc657bdc8fa1464fadb8b076abbedcfcc",
+   "local_sha256": "ed6d43201d0cba7f7772112d60f91d2dc657bdc8fa1464fadb8b076abbedcfcc",
+   "identical_to_source": true
+  },
+  "evaluator/d_sweep.py": {
+   "source_sha256": "186755b0e3bfbca70e81d0a73c22ba020344d096ccc19fe21b49e1ecb0b59d1a",
+   "local_sha256": "186755b0e3bfbca70e81d0a73c22ba020344d096ccc19fe21b49e1ecb0b59d1a",
+   "identical_to_source": true
+  },
+  "evaluator/jsonschema_lite.py": {
+   "source_sha256": "837a2d08cbbadaeae2e0ed195c3d336227e9c5d1fc9ae5f7823c66fd97cd4315",
+   "local_sha256": "837a2d08cbbadaeae2e0ed195c3d336227e9c5d1fc9ae5f7823c66fd97cd4315",
+   "identical_to_source": true
+  },
+  "evaluator/loaders.py": {
+   "source_sha256": "ba474d068aa6f0e1749bb965e9d0872d1372063b1c815ceeb5f5e4ab94ac0acb",
+   "local_sha256": "ba474d068aa6f0e1749bb965e9d0872d1372063b1c815ceeb5f5e4ab94ac0acb",
+   "identical_to_source": true
+  },
+  "evaluator/metrics.py": {
+   "source_sha256": "ebaaf12a8f2c6c21c0911bbc441cdbe2bef836a3653fb2a7ee837043942cf958",
+   "local_sha256": "ebaaf12a8f2c6c21c0911bbc441cdbe2bef836a3653fb2a7ee837043942cf958",
+   "identical_to_source": true
+  },
+  "evaluator/report.py": {
+   "source_sha256": "78691881edfcc6266968450c113ddfd75eb29c7380e665e46a0221056cf07216",
+   "local_sha256": "78691881edfcc6266968450c113ddfd75eb29c7380e665e46a0221056cf07216",
+   "identical_to_source": true
+  },
+  "evaluator/stats.py": {
+   "source_sha256": "85f9f53676c0547e04c20c3aa9a6e3fdbfd8b74a108044c9171742939fe05821",
+   "local_sha256": "85f9f53676c0547e04c20c3aa9a6e3fdbfd8b74a108044c9171742939fe05821",
+   "identical_to_source": true
+  },
+  "evaluator/sweep.py": {
+   "source_sha256": "3b706f4f1352a5d53d81f00877bb135b4be9d3037e22d799137995a8c504ecfb",
+   "local_sha256": "3b706f4f1352a5d53d81f00877bb135b4be9d3037e22d799137995a8c504ecfb",
+   "identical_to_source": true
+  },
+  "evaluator/validate.py": {
+   "source_sha256": "227af829cd473e2884045f295726b4d94efb2defb1a19cc8b2df2335d70851af",
+   "local_sha256": "227af829cd473e2884045f295726b4d94efb2defb1a19cc8b2df2335d70851af",
+   "identical_to_source": true
+  }
+ }
+}

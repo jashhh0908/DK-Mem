@@ -1,0 +1,9 @@
+# Byte-exact data files: the sanctioned Tier 1 input is checked against a pinned
+# sha256, and the fixtures are compared byte-for-byte with their generator's output.
+# Keep them LF in the working tree regardless of core.autocrlf.
+dkmem/data/tier1/eval_input/*.jsonl text eol=lf
+tests/fixtures/*.jsonl text eol=lf
+
+# Vendored upstream Mem0 sources are hash-pinned (dkmem/baselines/mem0/source.py): keep them LF byte-for-byte.
+dkmem/baselines/mem0/upstream/* text eol=lf
+eval/** text eol=lf

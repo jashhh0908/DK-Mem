@@ -1,0 +1,93 @@
+{
+ "status": "FROZEN",
+ "benchmark": "DK-Mem Tier-2 controlled multi-session injection benchmark",
+ "version": "1.0",
+ "frozen_at_utc": "2026-10-08T17:50Z",
+ "statement": "This is the frozen Tier-2 benchmark version 1.0 (controlled injection benchmark; constructed sentences; labels by construction from the provisional Tier-1 gold). Any change to the files below creates a new version and must not overwrite these hashes. Tier 2 is a controlled injection benchmark built from constructed sentences; it makes no claim about the natural frequency of these distinctions in conversation. Labels are by construction from the provisional Tier-1 gold.",
+ "approved_audit_edits": [
+  "H1 formatting normalisation",
+  "H2 Hindi honorific gold-same rewrites (7 pairs)",
+  "M1 may->April/September (2 pairs)",
+  "M3 German question wording (t2c_0014)",
+  "L1 distractor/assistant overlaps (9 bank entries + 'Alles notiert.')"
+ ],
+ "documented_limitations": [
+  "H3 name_variant gold-different read at the person level (4 conversations)",
+  "M2 direct address of a third party in the honorific turns",
+  "M4 gold-same QA conflates consolidation with retrieval",
+  "residual Devanagari-script cue on the 20 name_variant gold-same turns"
+ ],
+ "counts": {
+  "conversations": 69,
+  "injected_pairs": 69,
+  "qa_questions": 111,
+  "qa_references": 111,
+  "by_relation": {
+   "different": 42,
+   "same": 27
+  },
+  "by_class": {
+   "honorific_register": 13,
+   "kinship": 32,
+   "name_variant": 24
+  },
+  "by_language": {
+   "de": 6,
+   "hi": 63
+  },
+  "by_session_distance": {
+   "1": 23,
+   "3": 23,
+   "5": 23
+  },
+  "by_class_relation": {
+   "honorific_register|different": 6,
+   "honorific_register|same": 7,
+   "kinship|different": 32,
+   "name_variant|different": 4,
+   "name_variant|same": 20
+  },
+  "by_class_session_distance": {
+   "honorific_register|1": 4,
+   "honorific_register|3": 4,
+   "honorific_register|5": 5,
+   "kinship|1": 11,
+   "kinship|3": 11,
+   "kinship|5": 10,
+   "name_variant|1": 8,
+   "name_variant|3": 8,
+   "name_variant|5": 8
+  },
+  "by_relation_session_distance": {
+   "different|1": 14,
+   "different|3": 14,
+   "different|5": 14,
+   "same|1": 9,
+   "same|3": 9,
+   "same|5": 9
+  },
+  "by_language_class": {
+   "de|honorific_register": 6,
+   "hi|honorific_register": 7,
+   "hi|kinship": 32,
+   "hi|name_variant": 24
+  },
+  "qa_by_type": {
+   "disambiguation": 84,
+   "link": 27
+  }
+ },
+ "seed": 20261009,
+ "sha256": {
+  "data/tier2_conversations.jsonl": "e5b9926a0ae9e6be545ecf33030807db65947c55711b9072412583d7a1448221",
+  "data/tier2_injection_metadata.jsonl": "f1a207ea50745bb1d2b7e34ff7fa77f53e46b71b3a74a388b6a0886c0c38b7a3",
+  "data/tier2_gold.jsonl": "7bfd9ea4ead48ffe6e240cbd1d1d4ed77bb573dcce2ebebbc50815c54bc10df3",
+  "data/tier2_qa_questions.jsonl": "c9ecde4fb2f5d2e6eabe218ba2232e7769917dc79d4ee4f274290f9f16ca12b9",
+  "data/tier2_qa_reference.jsonl": "a6205389ef13e2e84873b647bbce874a5750e5a94602da37470a174dddb93b42",
+  "data/tier2_manifest.json": "ab8a99b5c3da5bedea8c449ea457b2b3824dc61148632b42c0bd1b44935a0a12",
+  "banks/pair_specs.json": "70689e771b6e82642397d16ac0e279aaa2dab664b5ef97d8d2df3139c910331a",
+  "banks/distractors.json": "98aeff1dbee715071589d4d1a7839eacdda43bc18ce40fa5843a3c849922ec80",
+  "generate_tier2.py": "e8736b6af1d9db61d0c79b02a19dfa3a8b0ee6df688535fdcc7b3f10c9715605",
+  "validate_tier2.py": "f89c2d60ccb229b0aa9ca3c1ef0f2f830702a36334a75d4ac7c9d42c69470d59"
+ }
+}

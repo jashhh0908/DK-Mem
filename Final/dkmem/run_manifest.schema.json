@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "run_manifest.schema.json",
+  "title": "RunManifest",
+  "description": "One run_manifest.json per experiment run. Emitted once, alongside the run's pairwise_eval.jsonl, so Team B can group/filter records by config without parsing every line.",
+  "type": "object",
+  "required": ["run_id", "strategy", "dataset_tier", "seed"],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "description": "Matches run_id in every pairwise_eval.jsonl record produced by this run."
+    },
+    "strategy": {
+      "type": "string",
+      "enum": [
+        "mem0",
+        "a-mem",
+        "store-surface-only",
+        "embedding-threshold",
+        "raise-tau",
+        "prompt-informed-judge",
+        "flat-dense-rag",
+        "dk-mem-lexicon",
+        "dk-mem-lexicon-llm"
+      ],
+      "description": "Same enum as PairwiseEvalRecord.strategy."
+    },
+    "backbone": {
+      "type": ["string", "null"],
+      "description": "Model used for the LLM-assisted stage(s), e.g. 'qwen2.5-1.5b', 'qwen2.5-7b'. Null for lexicon-only DK-Mem."
+    },
+    "dataset_tier": {
+      "type": "string",
+      "enum": ["tier1_minimal_pairs", "tier2_injected_sessions", "tier3_crosslingual_probe"],
+      "description": "Which of Team B's probe sets this run was evaluated against."
+    },
+    "seed": {
+      "type": "integer",
+      "description": "Random seed for this run. Report >=3 seeds per (strategy, dataset_tier) cell."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "pipeline_config": {
+      "type": "string",
+      "enum": ["A", "B", "C", "D"],
+      "description": "Stage-attribution configuration of the host pipeline: A = English-forced extraction + English gloss + LLM judge (isolates L1); B = native-language extraction prompt (keep the user's language and script) + extractor output + LLM judge (L2); C = verbatim surface text + LLM judge (L3); D = verbatim surface text + embedding threshold (L4). Omitted when the run is not one of the A-D configurations."
+    },
+    "dkmem_mode": {
+      "type": "string",
+      "enum": ["off", "lexicon", "lexicon+llm"],
+      "description": "Whether the DK-Mem gate is applied: 'off' (host only), 'lexicon' (gate on, distinctions from the lexicon alone) or 'lexicon+llm' (gate on, lexicon first, model second). Must agree with strategy: dk-mem-lexicon -> 'lexicon', dk-mem-lexicon-llm -> 'lexicon+llm', any other strategy -> 'off'. Omitted in runs that predate this field."
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+ "what": "Tier-2 Config C identity judge v2: prompt, NEW independent labelled validation set, scorer and acceptance criteria, frozen BEFORE any model run on them",
+ "frozen_at_utc": "2026-10-14T05:39:25+00:00",
+ "prompt_id": "merge_judge_entity_t2_v2",
+ "prompt_sha256": "36146ec054a700796a785a5a942c0fdaaa33a1e100103c8a8410d596c146f149",
+ "max_new_tokens": 128,
+ "model": "Qwen/Qwen2.5-3B-Instruct@aa8e72537993ba99e69dfaafa59ed015b17504d1 (same as v1; greedy, seed 0, batch 8)",
+ "files_sha256": {
+  "judge_validation_v2/cases_v2.jsonl": "98487dd574cec9d3ab44e9ede87bd03e7760ed71bbc1870cfe6e8464a406d64e",
+  "judge_validation_v2/criteria_v2.json": "5f7aa30b1a36e076fef48e9f2ffa7d3c249531415a9b93a4faf20f184879c981",
+  "judge_validation_v2/score_v2.py": "e16a8acf0f232ddcdc7d2e6fd2b2a9ecd5aa5dbfba80b3aedcc6b118a99eebb9",
+  "judge_validation_v2/make_cases_v2.py": "0298c354e2d32f393c14b74e026e2d79754170af311531e765edb77fb86381ba",
+  "judge_validation/score.py": "df62903a2e4ed31ed5ce1b393b879df8d64c00c57a2eccd5e12a67964cb933a8"
+ },
+ "n_cases": 77,
+ "independence": "new names, sentences and values: no sentence equals a v1 case, a v1.0 or mirror benchmark sentence or a distractor; no person name or place is shared with them or with either prompt; only closed classes recur (months, weekdays, kinship terms, German common nouns)",
+ "previous_attempt": "merge_judge_entity_t2_v1 failed criteria_v1 (eval/tier2_entity_runs/judge_validation_20261014); v1 cases are not used to accept v2",
+ "status": "FROZEN"
+}

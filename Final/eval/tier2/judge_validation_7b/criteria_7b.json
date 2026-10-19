@@ -1,0 +1,105 @@
+{
+ "version": "tier2_entity_judge_validation_criteria_7b",
+ "prompt_id": "merge_judge_entity_t2_v2",
+ "unit": "one call = one case judged in one order; every case is judged in both orders (ab: Memory A = text_a; ba: swapped)",
+ "decoding": {
+  "max_new_tokens": 128,
+  "do_sample": false,
+  "seed": 0,
+  "batch_size": 8,
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+  "placement": "HFGenerator.load_sharded over 2 x T4 (GPU0 10 GiB, GPU1 12 GiB caps); fp16"
+ },
+ "parser": "dkmem.memory.judge.parse_judge_output (strict; a parse failure is never a decision and counts as wrong)",
+ "gates": [
+  {
+   "id": "C1_parse",
+   "description": "no parse failures and no output reaching the decoding budget, over all calls",
+   "max_parse_failures": 0,
+   "max_at_budget": 0
+  },
+  {
+   "id": "C2_merge_recall",
+   "description": "controls expected merge (same fact, same entity compatible, same entity conflicting): share of calls answered merge",
+   "subset": {
+    "role": "control",
+    "expected": "merge"
+   },
+   "min": 0.85
+  },
+  {
+   "id": "C3_keep_recall",
+   "description": "controls expected keep_both, ambiguous excluded (different entities, user-only): share of calls answered keep_both",
+   "subset": {
+    "role": "control",
+    "expected": "keep_both",
+    "exclude_category": [
+     "ambiguous"
+    ]
+   },
+   "min": 0.9
+  },
+  {
+   "id": "C4_conflict_merge",
+   "description": "same entity with conflicting or changed facts: share answered merge",
+   "subset": {
+    "role": "control",
+    "category": [
+     "same_entity_conflict"
+    ]
+   },
+   "min": 0.75
+  },
+  {
+   "id": "C5_ambiguous_keep",
+   "description": "identity not supported: share answered keep_both",
+   "subset": {
+    "role": "control",
+    "category": [
+     "ambiguous"
+    ]
+   },
+   "min": 0.75
+  },
+  {
+   "id": "C6_order_consistency",
+   "description": "controls: share of CASES whose two orders got the same parsed decision",
+   "subset": {
+    "role": "control"
+   },
+   "min": 0.9
+  },
+  {
+   "id": "C7_not_degenerate",
+   "description": "each decision is at least this share of all calls",
+   "min_share_each_decision": 0.2
+  },
+  {
+   "id": "C8_attribute_shortcut",
+   "description": "controls, ambiguous excluded: accuracy in every (expected decision x attribute pattern) cell, so that neither 'same attribute => keep_both' nor 'different attribute => merge' can pass",
+   "subset": {
+    "role": "control",
+    "exclude_category": [
+     "ambiguous"
+    ],
+    "attribute_pattern": [
+     "same_attribute",
+     "different_attribute"
+    ]
+   },
+   "min_each_cell": 0.75
+  }
+ ],
+ "reported_not_gated": [
+  "probe cases by category (the language distinctions Tier 2 measures; failing them is a finding, not a prompt defect)",
+  "contested probe cases",
+  "accuracy by language"
+ ],
+ "on_failure": "stop; no v3 prompt, no relaxed criteria; recommend excluding Config C from this Tier-2 experiment, keeping its results and implementation (user instruction 2026-10-14)",
+ "backbone_change": "Config C judge backbone is Qwen2.5-7B here, NOT the Tier-1 / Tier-2 QA backbone Qwen2.5-3B: a Config C result with this judge is not comparable with Tier-1 Config C and differs from Config D only in more than the merge mechanism",
+ "unchanged_from_v1_v2": "every gate, subset and threshold is byte-identical to criteria_v1.json and criteria_v2.json (decided before any 7B run); only the model in the decoding block changes",
+ "reported_diagnostics_preregistered": [
+  "reason_decision_contradictions: a call whose reason states \"same entity\" but decides keep_both, or states \"different entities\"/\"not identifiable\" but decides merge (reported, not gated)"
+ ]
+}

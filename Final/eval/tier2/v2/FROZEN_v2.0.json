@@ -1,0 +1,73 @@
+{
+ "status": "FROZEN",
+ "benchmark": "DK-Mem Tier-2 controlled multi-session injection benchmark (v2)",
+ "version": "2.0",
+ "frozen_at_utc": "2026-10-17T13:45Z",
+ "statement": "Frozen Tier-2 benchmark v2: a controlled injection benchmark of constructed sentences in Hindi, Marathi and Gujarati; it makes no claim about the natural frequency of these distinctions in conversation. Labels are those of the pair specs pinned here; the review status of the specs and the lexicon is recorded in the review records pinned with the evaluation-plan freeze. Any change to a pinned file creates a new version and must not overwrite these hashes.",
+ "counts": {
+  "conversations": 126,
+  "injected_pairs": 126,
+  "qa_questions": 194,
+  "by_relation": {
+   "different": 68,
+   "same": 58
+  },
+  "by_language": {
+   "gu": 22,
+   "hi": 81,
+   "mr": 23
+  },
+  "by_class": {
+   "contextual_qualifier": 12,
+   "honorific_register": 26,
+   "kinship": 60,
+   "name_variant": 28
+  },
+  "by_split": {
+   "dev": 126
+  },
+  "by_session_distance": {
+   "1": 42,
+   "3": 42,
+   "5": 42
+  },
+  "by_language_class_relation": {
+   "gu|contextual_qualifier|different": 2,
+   "gu|honorific_register|different": 3,
+   "gu|honorific_register|same": 3,
+   "gu|kinship|different": 6,
+   "gu|kinship|same": 4,
+   "gu|name_variant|same": 4,
+   "hi|contextual_qualifier|different": 8,
+   "hi|honorific_register|different": 6,
+   "hi|honorific_register|same": 7,
+   "hi|kinship|different": 32,
+   "hi|kinship|same": 8,
+   "hi|name_variant|same": 20,
+   "mr|contextual_qualifier|different": 2,
+   "mr|honorific_register|different": 3,
+   "mr|honorific_register|same": 4,
+   "mr|kinship|different": 6,
+   "mr|kinship|same": 4,
+   "mr|name_variant|same": 4
+  }
+ },
+ "seed": 20261015,
+ "sha256": {
+  "data/tier2_conversations.jsonl": "418cfc06e57ec44333547f0e7464fe15af84d4b54b9f81d12115db959aa732ee",
+  "data/tier2_injection_metadata.jsonl": "f7dd50871083e780c9c9077bf88afc9b43ceac6fc30c2a87b7a88d9086553a97",
+  "data/tier2_gold.jsonl": "35b59c2a543be9f1b348ae352e3f83431205a5218c9417ec4afabb5e7518bb5d",
+  "data/tier2_qa_questions.jsonl": "dcae23ee75462c4d83b2ac4f88eafe312b315879be872780206dfbe0824043f1",
+  "data/tier2_qa_reference.jsonl": "57c96b4cfec8cf5741737618ed363bf2e491cfb63b12954ac7b788723a19a4ff",
+  "data/tier2_manifest.json": "ffd18e8239dc3034f3c26d9482c4eb713673b93e641f273e16c4169c6f722580",
+  "banks/pair_specs_v2.json": "d160aa24cccf73580b9293fa5863fefed57b7726affe1856f0677da1a9fce673",
+  "banks/splits.jsonl": "d79fa08cf7265632bf6ce1e70cf0d221a8856d495d1a4b525d833c9d72085b39",
+  "banks/distractors/distractors_v2_1.json": "4029cc43ac75c81f7352efec38f8c5cb2767d4b2c0c1884757a46fdfe88e351f",
+  "lexicon/distinction_features.json": "565c95fc973fb123326edb9772f69119127c83216ac2f7fa97527bfe21377e59",
+  "ASSEMBLY.json": "602003d8164db7a68c71ef3d75295ee063e85618992bae156caaabd6e1412995",
+  "../generate_tier2_v2.py": "1c042698e6dd051fd9f46112e776c5e71e029c255224a233baf24a337b16c9f7",
+  "../generate_tier2.py": "e8736b6af1d9db61d0c79b02a19dfa3a8b0ee6df688535fdcc7b3f10c9715605",
+  "../validate_tier2.py": "f89c2d60ccb229b0aa9ca3c1ef0f2f830702a36334a75d4ac7c9d42c69470d59",
+  "../qa_norm.py": "1e0df9a7c364f89f81760d67e434c239d69b1f307991eca441c5337ba77ea0e2"
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "version": "tier2_entity_judge_validation_criteria_v2",
+ "prompt_id": "merge_judge_entity_t2_v2",
+ "unit": "one call = one case judged in one order; every case is judged in both orders (ab: Memory A = text_a; ba: swapped)",
+ "decoding": {
+  "max_new_tokens": 128,
+  "do_sample": false,
+  "seed": 0,
+  "batch_size": 8,
+  "model_id": "Qwen/Qwen2.5-3B-Instruct",
+  "model_revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+ },
+ "parser": "dkmem.memory.judge.parse_judge_output (strict; a parse failure is never a decision and counts as wrong)",
+ "gates": [
+  {
+   "id": "C1_parse",
+   "description": "no parse failures and no output reaching the decoding budget, over all calls",
+   "max_parse_failures": 0,
+   "max_at_budget": 0
+  },
+  {
+   "id": "C2_merge_recall",
+   "description": "controls expected merge (same fact, same entity compatible, same entity conflicting): share of calls answered merge",
+   "subset": {
+    "role": "control",
+    "expected": "merge"
+   },
+   "min": 0.85
+  },
+  {
+   "id": "C3_keep_recall",
+   "description": "controls expected keep_both, ambiguous excluded (different entities, user-only): share of calls answered keep_both",
+   "subset": {
+    "role": "control",
+    "expected": "keep_both",
+    "exclude_category": [
+     "ambiguous"
+    ]
+   },
+   "min": 0.9
+  },
+  {
+   "id": "C4_conflict_merge",
+   "description": "same entity with conflicting or changed facts: share answered merge",
+   "subset": {
+    "role": "control",
+    "category": [
+     "same_entity_conflict"
+    ]
+   },
+   "min": 0.75
+  },
+  {
+   "id": "C5_ambiguous_keep",
+   "description": "identity not supported: share answered keep_both",
+   "subset": {
+    "role": "control",
+    "category": [
+     "ambiguous"
+    ]
+   },
+   "min": 0.75
+  },
+  {
+   "id": "C6_order_consistency",
+   "description": "controls: share of CASES whose two orders got the same parsed decision",
+   "subset": {
+    "role": "control"
+   },
+   "min": 0.9
+  },
+  {
+   "id": "C7_not_degenerate",
+   "description": "each decision is at least this share of all calls",
+   "min_share_each_decision": 0.2
+  },
+  {
+   "id": "C8_attribute_shortcut",
+   "description": "controls, ambiguous excluded: accuracy in every (expected decision x attribute pattern) cell, so that neither 'same attribute => keep_both' nor 'different attribute => merge' can pass",
+   "subset": {
+    "role": "control",
+    "exclude_category": [
+     "ambiguous"
+    ],
+    "attribute_pattern": [
+     "same_attribute",
+     "different_attribute"
+    ]
+   },
+   "min_each_cell": 0.75
+  }
+ ],
+ "reported_not_gated": [
+  "probe cases by category (the language distinctions Tier 2 measures; failing them is a finding, not a prompt defect)",
+  "contested probe cases",
+  "accuracy by language"
+ ],
+ "on_failure": "stop and report; no further prompt revision against this or any successive set (user instruction 2026-10-14)",
+ "unchanged_from_v1": "every gate, subset and threshold is identical to criteria_v1.json (decided before any v2 run): the v1 failure was the prompt, not the criteria, and keeping them fixed isolates the prompt change"
+}

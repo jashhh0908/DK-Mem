@@ -1,0 +1,178 @@
+# =====================================================================================================================
+# DK-Mem public code release -- ALLOWLIST .gitignore
+#
+# Everything is ignored unless it is re-included below, so a new or forgotten folder stays private by default.
+# Released: the method (dkmem/), the evaluation and benchmark-construction code (eval/), the Kaggle kernel builders
+# (validation/*/build_kernel*.py), the tests, the checking tools and the paper's number generators.
+# NOT released: benchmark data and gold labels, Team B deliveries, review sheets, run outputs, kernels and evaluator
+# folders, internal planning notes, the paper source. Releasing the benchmark itself is a separate decision.
+#
+# Layer 2 (end of file) denies label/key/secret patterns everywhere, even inside re-included folders. Keep it LAST:
+# in a .gitignore the last matching rule wins.
+# =====================================================================================================================
+
+# ---- 1. ignore everything at the top level ---------------------------------------------------------------------------
+/*
+
+# ---- 2. repository files ---------------------------------------------------------------------------------------------
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/NOTICE
+!/CITATION.cff
+!/requirements*.txt
+!/pyproject.toml
+
+# ---- 3. the method: the dkmem package --------------------------------------------------------------------------------
+!/dkmem/
+# Tier-1 evaluation input derived from Team B's data
+/dkmem/data/
+
+# ---- 4. evaluation code ----------------------------------------------------------------------------------------------
+!/eval/
+/eval/*
+!/eval/harness/
+!/eval/evaluator/
+!/eval/tier1/
+!/eval/diagnostics/
+!/eval/tests/
+!/eval/evaluation_plan_v2.md
+
+!/eval/tier2/
+/eval/tier2/*
+!/eval/tier2/*.py
+!/eval/tier2/README.md
+!/eval/tier2/analysis_plan_full_v1.md
+# sha256 pins only (no data); lets others verify a copy of the benchmark
+!/eval/tier2/FROZEN_v1.0.json
+!/eval/tier2/ANALYSIS_PLAN_FREEZE_v1.json
+!/eval/tier2/judge_validation/
+!/eval/tier2/judge_validation_7b/
+!/eval/tier2/judge_validation_v2/
+!/eval/tier2/kinship_probe/
+# labelled judge-validation cases (data)
+/eval/tier2/judge_validation*/cases_*.jsonl
+/eval/tier2/kinship_probe/cases_*.jsonl
+/eval/tier2/kinship_probe/review_sheet.csv
+!/eval/tier2/mirror_v1_1/
+/eval/tier2/mirror_v1_1/data/
+/eval/tier2/mirror_v1_1/banks/
+# these two scripts embed benchmark sentences (the mirror replacements; the 18 v2.1 repairs), i.e. benchmark data
+/eval/tier2/mirror_v1_1/make_mirror_bank.py
+/eval/tier2/repair_v2_1.py
+!/eval/tier2/v2/
+/eval/tier2/v2/*
+# sha256 pins only
+!/eval/tier2/v2/FROZEN_v2.0.json
+# the frozen lexicon the v2 runs used (part of the method)
+!/eval/tier2/v2/lexicon/
+
+# ---- 5. Kaggle kernel builders (code only; generated kernels, reports and outputs stay private) ----------------------
+!/validation/
+/validation/*
+!/validation/*/
+/validation/*/*
+!/validation/*/build_kernel.py
+!/validation/*/build_kernels.py
+
+# ---- 6. tests and checking tools -------------------------------------------------------------------------------------
+!/tests/
+!/tools/
+# the lead's local baseline pins
+/tools/frozen_baseline_sha256.txt
+
+# ---- 7. paper: number/figure generators and their aggregate outputs only (no labels per pair) ------------------------
+!/paper/
+/paper/*
+!/paper/tools/
+# writes the gold-visible review sheets
+/paper/tools/make_review_sheets.py
+!/paper/generated/
+!/paper/figures/
+# To publish the paper source after review (double-blind venues: only once anonymity no longer matters):
+# !/paper/main.tex
+# !/paper/refs.bib
+# !/paper/sections/
+
+# =====================================================================================================================
+# LAYER 2 -- denied everywhere, including inside the folders above. Keep this block LAST.
+# =====================================================================================================================
+
+# gold labels, answer keys and evaluator-only files
+*answer_key*
+teamB_*
+**/tier2_gold*.jsonl
+**/tier2_qa_reference*.jsonl
+**/tier2_injection_metadata*.jsonl
+**/tier2_conversations*.jsonl
+**/tier2_qa_questions*.jsonl
+**/tier2_manifest*.json
+**/pair_specs*.json
+**/splits*.jsonl
+**/pilot_selection*.json
+**/*contract_report*.json
+**/*passthrough*.jsonl
+**/qa_id_map*.json
+**/*_review*.csv
+**/exclusions.txt
+**/heldout*/
+**/team_b_delivery/
+**/handoff_independent_test*/
+
+# run outputs, kernels, evaluator folders
+**/*.evaluator/
+**/kernel_*/
+**/kaggle_output/
+**/runs/
+**/*runs/
+**/*.ipynb
+**/*_cache.jsonl
+**/*judge_log*.jsonl
+**/*extraction_log*.jsonl
+**/*retrieval_log*.jsonl
+**/*qa_answers*.jsonl
+**/*store_final*.jsonl
+**/pairwise_eval*.jsonl
+**/run_manifest.json
+**/*.zip
+
+# secrets and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+kaggle.json
+**/.kaggle/
+*credentials*.json
+*secret*
+*token*.txt
+
+# models and caches
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.gguf
+.cache/
+huggingface/
+transformers_cache/
+
+# python, editors, OS
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,1022 @@
+{
+ "arms": {
+  "Main": {
+   "paired_contrasts": {
+    "C: gate lexicon - off, direct merge rate, different": {
+     "ci95": [
+      -0.30952380952380953,
+      -0.07142857142857142
+     ],
+     "diff_y_minus_x": -0.19047619047619047,
+     "discordant_x_only": 8,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 0.0078125,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.35714285714285715,
+     "y_rate": 0.16666666666666666
+    },
+    "C: gate lexicon - off, direct merge rate, same": {
+     "ci95": [
+      -0.3333333333333333,
+      -0.037037037037037035
+     ],
+     "diff_y_minus_x": -0.18518518518518517,
+     "discordant_x_only": 5,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 0.0625,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 1.0,
+     "y_rate": 0.8148148148148148
+    },
+    "D: gate lexicon - off, direct merge rate, different": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "diff_y_minus_x": 0.0,
+     "discordant_x_only": 0,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 1.0,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.11904761904761904,
+     "y_rate": 0.11904761904761904
+    },
+    "D: gate lexicon - off, direct merge rate, same": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "diff_y_minus_x": 0.0,
+     "discordant_x_only": 0,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 1.0,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.0,
+     "y_rate": 0.0
+    },
+    "gate lexicon: C - D, direct merge rate, different": {
+     "ci95": [
+      0.0,
+      0.11904761904761904
+     ],
+     "diff_y_minus_x": 0.047619047619047616,
+     "discordant_x_only": 0,
+     "discordant_y_only": 2,
+     "mcnemar_exact_p": 0.5,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.11904761904761904,
+     "y_rate": 0.16666666666666666
+    },
+    "gate lexicon: C - D, direct merge rate, same": {
+     "ci95": [
+      0.6666666666666666,
+      0.9629629629629629
+     ],
+     "diff_y_minus_x": 0.8148148148148148,
+     "discordant_x_only": 0,
+     "discordant_y_only": 22,
+     "mcnemar_exact_p": 4.76837158203125e-07,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.0,
+     "y_rate": 0.8148148148148148
+    },
+    "gate off: C - D, direct merge rate, different": {
+     "ci95": [
+      0.11904761904761904,
+      0.38095238095238093
+     ],
+     "diff_y_minus_x": 0.23809523809523808,
+     "discordant_x_only": 0,
+     "discordant_y_only": 10,
+     "mcnemar_exact_p": 0.001953125,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.11904761904761904,
+     "y_rate": 0.35714285714285715
+    },
+    "gate off: C - D, direct merge rate, same": {
+     "ci95": [
+      1.0,
+      1.0
+     ],
+     "diff_y_minus_x": 1.0,
+     "discordant_x_only": 0,
+     "discordant_y_only": 27,
+     "mcnemar_exact_p": 1.4901161193847656e-08,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.0,
+     "y_rate": 1.0
+    }
+   },
+   "runs": {
+    "Clex": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.08315916646398075,
+        0.3060400274464885
+       ],
+       "k": 7,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.08180707142976529,
+        0.3669868361854843
+       ],
+       "k": 5,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "C",
+     "gate": {
+      "bypassed_by_kind": {},
+      "injected_pair_vetoes": 13,
+      "injected_pair_vetoes_bypassed": 0,
+      "vetoes": 25,
+      "vetoes_by_compatibility": {
+       "incompatible": 13,
+       "underdetermined": 12
+      },
+      "vetoes_bypassed_via_intermediate_merges": 0
+     },
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.004920407139810443,
+        0.14169718653273855
+       ],
+       "k": 1,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.08180707142976529,
+        0.3669868361854843
+       ],
+       "k": 5,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "lexicon",
+     "qa": {
+      "ci95": [
+       0.7452830188679245,
+       0.8888888888888888
+      ],
+      "k": 91,
+      "n": 111,
+      "rate": 0.8198198198198198
+     },
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-v10-dk-mem-lexicon-C_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.08315916646398075,
+         0.3060400274464885
+        ],
+        "k": 7,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.06150033723578355,
+         0.3353119932821348
+        ],
+        "k": 4,
+        "n": 26
+       }
+      },
+      "excluded": [
+       "t2p_0040"
+      ],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.004920407139810443,
+         0.14169718653273855
+        ],
+        "k": 1,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.06150033723578355,
+         0.3353119932821348
+        ],
+        "k": 4,
+        "n": 26
+       }
+      }
+     }
+    },
+    "Coff": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.22989188315618772,
+        0.5083363428054419
+       ],
+       "k": 15,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.0,
+        0.12455502974186705
+       ],
+       "k": 0,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "C",
+     "gate": null,
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.13750477662994837,
+        0.4107045376672835
+       ],
+       "k": 9,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.0,
+        0.12455502974186705
+       ],
+       "k": 0,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "off",
+     "qa": {
+      "ci95": [
+       0.7345132743362832,
+       0.8807339449541285
+      ],
+      "k": 90,
+      "n": 111,
+      "rate": 0.8108108108108109
+     },
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-v10-store-surface-only-C_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.22989188315618772,
+         0.5083363428054419
+        ],
+        "k": 15,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.0,
+         0.1287289218592153
+        ],
+        "k": 0,
+        "n": 26
+       }
+      },
+      "excluded": [
+       "t2p_0040"
+      ],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.13750477662994837,
+         0.4107045376672835
+        ],
+        "k": 9,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.0,
+         0.1287289218592153
+        ],
+        "k": 0,
+        "n": 26
+       }
+      }
+     }
+    },
+    "Dlex": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.05193803327758237,
+        0.25000390262009675
+       ],
+       "k": 5,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "D",
+     "gate": {
+      "bypassed_by_kind": {},
+      "injected_pair_vetoes": 0,
+      "injected_pair_vetoes_bypassed": 0,
+      "vetoes": 0,
+      "vetoes_by_compatibility": {},
+      "vetoes_bypassed_via_intermediate_merges": 0
+     },
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.0,
+        0.09641862859446367
+       ],
+       "k": 0,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "lexicon",
+     "qa": {
+      "ci95": [
+       0.7477477477477478,
+       0.8878504672897196
+      ],
+      "k": 91,
+      "n": 111,
+      "rate": 0.8198198198198198
+     },
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-v10-dk-mem-lexicon-D_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.05193803327758237,
+         0.25000390262009675
+        ],
+        "k": 5,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.8712710781407846,
+         1.0
+        ],
+        "k": 26,
+        "n": 26
+       }
+      },
+      "excluded": [
+       "t2p_0040"
+      ],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.0,
+         0.09641862859446367
+        ],
+        "k": 0,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.8712710781407846,
+         1.0
+        ],
+        "k": 26,
+        "n": 26
+       }
+      }
+     }
+    },
+    "Doff": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.05193803327758237,
+        0.25000390262009675
+       ],
+       "k": 5,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "D",
+     "gate": null,
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.0,
+        0.09641862859446367
+       ],
+       "k": 0,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "off",
+     "qa": {
+      "ci95": [
+       0.7477477477477478,
+       0.8878504672897196
+      ],
+      "k": 91,
+      "n": 111,
+      "rate": 0.8198198198198198
+     },
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-v10-embedding-threshold-D_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.05193803327758237,
+         0.25000390262009675
+        ],
+        "k": 5,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.8712710781407846,
+         1.0
+        ],
+        "k": 26,
+        "n": 26
+       }
+      },
+      "excluded": [
+       "t2p_0040"
+      ],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.0,
+         0.09641862859446367
+        ],
+        "k": 0,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.8712710781407846,
+         1.0
+        ],
+        "k": 26,
+        "n": 26
+       }
+      }
+     }
+    }
+   }
+  },
+  "Mirror": {
+   "paired_contrasts": {
+    "C: gate lexicon - off, direct merge rate, different": {
+     "ci95": [
+      -0.11904761904761904,
+      0.0
+     ],
+     "diff_y_minus_x": -0.047619047619047616,
+     "discordant_x_only": 2,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 0.5,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.2619047619047619,
+     "y_rate": 0.21428571428571427
+    },
+    "C: gate lexicon - off, direct merge rate, same": {
+     "ci95": [
+      -0.3333333333333333,
+      -0.037037037037037035
+     ],
+     "diff_y_minus_x": -0.18518518518518517,
+     "discordant_x_only": 5,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 0.0625,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.9629629629629629,
+     "y_rate": 0.7777777777777778
+    },
+    "D: gate lexicon - off, direct merge rate, different": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "diff_y_minus_x": 0.0,
+     "discordant_x_only": 0,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 1.0,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.0,
+     "y_rate": 0.0
+    },
+    "D: gate lexicon - off, direct merge rate, same": {
+     "ci95": [
+      0.0,
+      0.0
+     ],
+     "diff_y_minus_x": 0.0,
+     "discordant_x_only": 0,
+     "discordant_y_only": 0,
+     "mcnemar_exact_p": 1.0,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.0,
+     "y_rate": 0.0
+    },
+    "gate lexicon: C - D, direct merge rate, different": {
+     "ci95": [
+      0.09523809523809523,
+      0.35714285714285715
+     ],
+     "diff_y_minus_x": 0.21428571428571427,
+     "discordant_x_only": 0,
+     "discordant_y_only": 9,
+     "mcnemar_exact_p": 0.00390625,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.0,
+     "y_rate": 0.21428571428571427
+    },
+    "gate lexicon: C - D, direct merge rate, same": {
+     "ci95": [
+      0.6296296296296297,
+      0.9259259259259259
+     ],
+     "diff_y_minus_x": 0.7777777777777778,
+     "discordant_x_only": 0,
+     "discordant_y_only": 21,
+     "mcnemar_exact_p": 9.5367431640625e-07,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.0,
+     "y_rate": 0.7777777777777778
+    },
+    "gate off: C - D, direct merge rate, different": {
+     "ci95": [
+      0.14285714285714285,
+      0.40476190476190477
+     ],
+     "diff_y_minus_x": 0.2619047619047619,
+     "discordant_x_only": 0,
+     "discordant_y_only": 11,
+     "mcnemar_exact_p": 0.0009765625,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 42,
+     "x_rate": 0.0,
+     "y_rate": 0.2619047619047619
+    },
+    "gate off: C - D, direct merge rate, same": {
+     "ci95": [
+      0.8888888888888888,
+      1.0
+     ],
+     "diff_y_minus_x": 0.9629629629629629,
+     "discordant_x_only": 0,
+     "discordant_y_only": 26,
+     "mcnemar_exact_p": 2.9802322387695312e-08,
+     "method": "paired percentile bootstrap over units, B=10000, seed 20261014; exact two-sided McNemar",
+     "n": 27,
+     "x_rate": 0.0,
+     "y_rate": 0.9629629629629629
+    }
+   },
+   "runs": {
+    "Clex": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.11705799876003031,
+        0.35939845316322905
+       ],
+       "k": 9,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.10607239452360037,
+        0.4075692886663257
+       ],
+       "k": 6,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "C",
+     "gate": {
+      "bypassed_by_kind": {},
+      "injected_pair_vetoes": 7,
+      "injected_pair_vetoes_bypassed": 0,
+      "vetoes": 18,
+      "vetoes_by_compatibility": {
+       "incompatible": 7,
+       "underdetermined": 11
+      },
+      "vetoes_bypassed_via_intermediate_merges": 0
+     },
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.02874861133599338,
+        0.2182669124927263
+       ],
+       "k": 3,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.10607239452360037,
+        0.4075692886663257
+       ],
+       "k": 6,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "lexicon",
+     "qa": null,
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-mirror-dk-mem-lexicon-C_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.11705799876003031,
+         0.35939845316322905
+        ],
+        "k": 9,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.10607239452360037,
+         0.4075692886663257
+        ],
+        "k": 6,
+        "n": 27
+       }
+      },
+      "excluded": [],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.02874861133599338,
+         0.2182669124927263
+        ],
+        "k": 3,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.10607239452360037,
+         0.4075692886663257
+        ],
+        "k": 6,
+        "n": 27
+       }
+      }
+     }
+    },
+    "Coff": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.1530264028783298,
+        0.4106873070577196
+       ],
+       "k": 11,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.006568145980785103,
+        0.18283465933575843
+       ],
+       "k": 1,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "C",
+     "gate": null,
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.06081815009132838,
+        0.286595303893562
+       ],
+       "k": 5,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.006568145980785103,
+        0.18283465933575843
+       ],
+       "k": 1,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "off",
+     "qa": null,
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-mirror-store-surface-only-C_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.1530264028783298,
+         0.4106873070577196
+        ],
+        "k": 11,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.006568145980785103,
+         0.18283465933575843
+        ],
+        "k": 1,
+        "n": 27
+       }
+      },
+      "excluded": [],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.06081815009132838,
+         0.286595303893562
+        ],
+        "k": 5,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.006568145980785103,
+         0.18283465933575843
+        ],
+        "k": 1,
+        "n": 27
+       }
+      }
+     }
+    },
+    "Dlex": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.0,
+        0.08379879086570391
+       ],
+       "k": 0,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "D",
+     "gate": {
+      "bypassed_by_kind": {},
+      "injected_pair_vetoes": 0,
+      "injected_pair_vetoes_bypassed": 0,
+      "vetoes": 0,
+      "vetoes_by_compatibility": {},
+      "vetoes_bypassed_via_intermediate_merges": 0
+     },
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.0,
+        0.09641862859446367
+       ],
+       "k": 0,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "lexicon",
+     "qa": null,
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-mirror-dk-mem-lexicon-D_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.0,
+         0.08379879086570391
+        ],
+        "k": 0,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.8754449702581328,
+         0.9999999999999998
+        ],
+        "k": 27,
+        "n": 27
+       }
+      },
+      "excluded": [],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.0,
+         0.09641862859446367
+        ],
+        "k": 0,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.8754449702581328,
+         0.9999999999999998
+        ],
+        "k": 27,
+        "n": 27
+       }
+      }
+     }
+    },
+    "Doff": {
+     "all": {
+      "FCR": {
+       "ci95": [
+        0.0,
+        0.08379879086570391
+       ],
+       "k": 0,
+       "n": 42
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "by_language_n": {
+      "de": 6,
+      "hi": 63
+     },
+     "config": "D",
+     "gate": null,
+     "hindi": {
+      "FCR": {
+       "ci95": [
+        0.0,
+        0.09641862859446367
+       ],
+       "k": 0,
+       "n": 36
+      },
+      "MCR": {
+       "ci95": [
+        0.8754449702581328,
+        0.9999999999999998
+       ],
+       "k": 27,
+       "n": 27
+      }
+     },
+     "judge_parse_error_pairs": [],
+     "mode": "off",
+     "qa": null,
+     "retrieval_misses": [],
+     "run_id": "t2cd7b-full-mirror-embedding-threshold-D_seed0",
+     "sensitivity_excluding_review_flags": {
+      "all": {
+       "FCR": {
+        "ci95": [
+         0.0,
+         0.08379879086570391
+        ],
+        "k": 0,
+        "n": 42
+       },
+       "MCR": {
+        "ci95": [
+         0.8754449702581328,
+         0.9999999999999998
+        ],
+        "k": 27,
+        "n": 27
+       }
+      },
+      "excluded": [],
+      "hindi": {
+       "FCR": {
+        "ci95": [
+         0.0,
+         0.09641862859446367
+        ],
+        "k": 0,
+        "n": 36
+       },
+       "MCR": {
+        "ci95": [
+         0.8754449702581328,
+         0.9999999999999998
+        ],
+        "k": 27,
+        "n": 27
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "source": {
+  "report": "eval/tier2_entity_runs/TIER2_FULL_entity_report_v1.json",
+  "sha256": "18b5d9df89087f44bf74fc36db022e79db88b6b897595018be32e2dd77e7f096"
+ }
+}
